@@ -1,4 +1,4 @@
-<img src="https://github.com/yurii-polishchuk/ipcount-core/blob/develop/space-station.png" width="128" heigh="128">
+<img src="https://github.com/yurii-polishchuk/ipcount-core/blob/master/assets/space-station.png" width="128" heigh="128">
 
 # ipcount-core
 
