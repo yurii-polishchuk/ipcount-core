@@ -1,5 +1,4 @@
-![ipcount-core](https://github.com/yurii-polishchuk/ipcount-core/blob/develop/space-station.png =64x64 "ipcount-core")
-
+<img src="https://github.com/yurii-polishchuk/ipcount-core/blob/develop/space-station.png" width="128" heigh="128">
 # ipcount-core
 
 ## An Internet Protocol Count Training Project
