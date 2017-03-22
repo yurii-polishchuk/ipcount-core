@@ -1,4 +1,4 @@
-![ipcount-core](https://github.com/yurii-polishchuk/ipcount-core/blob/develop/space-station.png "ipcount-core")
+![ipcount-core](https://github.com/yurii-polishchuk/ipcount-core/blob/develop/space-station.png =64x64 "ipcount-core")
 
 # ipcount-core
 
