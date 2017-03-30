@@ -47,7 +47,7 @@ CREATE TABLE `clients` (
   `speedout` int(2) NOT NULL DEFAULT '1',
   `speedloc` int(2) NOT NULL DEFAULT '1',
   `date` date NOT NULL DEFAULT '1970-01-01',
-  `ndog` int(8) NOT NULL,a
+  `ndog` int(8) NOT NULL,
   `groupc` int(4) NOT NULL DEFAULT '0',
   `statusp` int(1) NOT NULL DEFAULT '1',
   `macr` int(1) NOT NULL DEFAULT '0',
