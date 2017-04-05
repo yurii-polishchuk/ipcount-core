@@ -9,21 +9,21 @@ import java.util.Date;
 public class ClientEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
     @Column(name = "hosts", nullable = false)
     private String hosts;
     @Column(name = "ipaddress", nullable = false)
-    private String ipaddress;
+    private String ipAddress;
     @Column(name = "mac", nullable = false)
     private String mac;
     @Column(name = "rule", nullable = false)
-    private int rule;
+    private Integer rule;
     @Column(name = "i", nullable = false)
     private String i;
     @Column(name = "status", nullable = false)
-    private int status;
+    private Integer status;
     @Column(name = "tplane", nullable = false)
-    private int tplane;
+    private Integer tPlane;
     @Column(name = "name", nullable = false)
     private String name;
     @Column(name = "phone", nullable = false)
@@ -33,49 +33,49 @@ public class ClientEntity {
     @Column(name = "address", nullable = false)
     private String address;
     @Column(name = "streetname", nullable = false)
-    private String streetname;
+    private String streetName;
     @Column(name = "housenumber", nullable = false)
-    private String housenumber;
+    private String houseNumber;
     @Column(name = "flatnumber", nullable = false)
-    private String flatnumber;
+    private String flatNumber;
     @Column(name = "mail", nullable = false)
     private String mail;
     @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "balance", nullable = false)
-    private double balance;
+    private Double balance;
     @Column(name = "speedin", nullable = false)
-    private int speedin;
+    private Integer speedIn;
     @Column(name = "speedout", nullable = false)
-    private int speedout;
+    private Integer speedOut;
     @Column(name = "speedloc", nullable = false)
-    private int speedloc;
+    private Integer speedLoc;
     @Column(name = "date", nullable = false)
     private Date date;
     @Column(name = "ndog", nullable = false)
-    private int ndog;
+    private Integer nDog;
     @Column(name = "groupc", nullable = false)
-    private int groupc;
+    private Integer groupC;
     @Column(name = "statusp", nullable = false)
-    private int statusp;
+    private Integer statusP;
     @Column(name = "macr", nullable = false)
-    private int macr;
+    private Integer macR;
     @Column(name = "ruler", nullable = false)
-    private int ruler;
+    private Integer ruleR;
     @Column(name = "speedinr", nullable = false)
-    private int speedinr;
+    private Integer speedInR;
     @Column(name = "speedoutr", nullable = false)
-    private int speedoutr;
+    private Integer speedOutR;
     @Column(name = "speedlocr", nullable = false)
-    private int speedlocr;
+    private Integer speedLocR;
     @Column(name = "tools", nullable = false)
-    private int tools;
+    private Integer tools;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -87,12 +87,12 @@ public class ClientEntity {
         this.hosts = hosts;
     }
 
-    public String getIpaddress() {
-        return ipaddress;
+    public String getIpAddress() {
+        return ipAddress;
     }
 
-    public void setIpaddress(String ipaddress) {
-        this.ipaddress = ipaddress;
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 
     public String getMac() {
@@ -103,11 +103,11 @@ public class ClientEntity {
         this.mac = mac;
     }
 
-    public int getRule() {
+    public Integer getRule() {
         return rule;
     }
 
-    public void setRule(int rule) {
+    public void setRule(Integer rule) {
         this.rule = rule;
     }
 
@@ -119,20 +119,20 @@ public class ClientEntity {
         this.i = i;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 
-    public int getTplane() {
-        return tplane;
+    public Integer gettPlane() {
+        return tPlane;
     }
 
-    public void setTplane(int tplane) {
-        this.tplane = tplane;
+    public void settPlane(Integer tPlane) {
+        this.tPlane = tPlane;
     }
 
     public String getName() {
@@ -167,28 +167,28 @@ public class ClientEntity {
         this.address = address;
     }
 
-    public String getStreetname() {
-        return streetname;
+    public String getStreetName() {
+        return streetName;
     }
 
-    public void setStreetname(String streetname) {
-        this.streetname = streetname;
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
-    public String getHousenumber() {
-        return housenumber;
+    public String getHouseNumber() {
+        return houseNumber;
     }
 
-    public void setHousenumber(String housenumber) {
-        this.housenumber = housenumber;
+    public void setHouseNumber(String houseNumber) {
+        this.houseNumber = houseNumber;
     }
 
-    public String getFlatnumber() {
-        return flatnumber;
+    public String getFlatNumber() {
+        return flatNumber;
     }
 
-    public void setFlatnumber(String flatnumber) {
-        this.flatnumber = flatnumber;
+    public void setFlatNumber(String flatNumber) {
+        this.flatNumber = flatNumber;
     }
 
     public String getMail() {
@@ -207,36 +207,36 @@ public class ClientEntity {
         this.password = password;
     }
 
-    public double getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
 
-    public int getSpeedin() {
-        return speedin;
+    public Integer getSpeedIn() {
+        return speedIn;
     }
 
-    public void setSpeedin(int speedin) {
-        this.speedin = speedin;
+    public void setSpeedIn(Integer speedIn) {
+        this.speedIn = speedIn;
     }
 
-    public int getSpeedout() {
-        return speedout;
+    public Integer getSpeedOut() {
+        return speedOut;
     }
 
-    public void setSpeedout(int speedout) {
-        this.speedout = speedout;
+    public void setSpeedOut(Integer speedOut) {
+        this.speedOut = speedOut;
     }
 
-    public int getSpeedloc() {
-        return speedloc;
+    public Integer getSpeedLoc() {
+        return speedLoc;
     }
 
-    public void setSpeedloc(int speedloc) {
-        this.speedloc = speedloc;
+    public void setSpeedLoc(Integer speedLoc) {
+        this.speedLoc = speedLoc;
     }
 
     public Date getDate() {
@@ -247,75 +247,75 @@ public class ClientEntity {
         this.date = date;
     }
 
-    public int getNdog() {
-        return ndog;
+    public Integer getnDog() {
+        return nDog;
     }
 
-    public void setNdog(int ndog) {
-        this.ndog = ndog;
+    public void setnDog(Integer nDog) {
+        this.nDog = nDog;
     }
 
-    public int getGroupc() {
-        return groupc;
+    public Integer getGroupC() {
+        return groupC;
     }
 
-    public void setGroupc(int groupc) {
-        this.groupc = groupc;
+    public void setGroupC(Integer groupC) {
+        this.groupC = groupC;
     }
 
-    public int getStatusp() {
-        return statusp;
+    public Integer getStatusP() {
+        return statusP;
     }
 
-    public void setStatusp(int statusp) {
-        this.statusp = statusp;
+    public void setStatusP(Integer statusP) {
+        this.statusP = statusP;
     }
 
-    public int getMacr() {
-        return macr;
+    public Integer getMacR() {
+        return macR;
     }
 
-    public void setMacr(int macr) {
-        this.macr = macr;
+    public void setMacR(Integer macR) {
+        this.macR = macR;
     }
 
-    public int getRuler() {
-        return ruler;
+    public Integer getRuleR() {
+        return ruleR;
     }
 
-    public void setRuler(int ruler) {
-        this.ruler = ruler;
+    public void setRuleR(Integer ruleR) {
+        this.ruleR = ruleR;
     }
 
-    public int getSpeedinr() {
-        return speedinr;
+    public Integer getSpeedInR() {
+        return speedInR;
     }
 
-    public void setSpeedinr(int speedinr) {
-        this.speedinr = speedinr;
+    public void setSpeedInR(Integer speedInR) {
+        this.speedInR = speedInR;
     }
 
-    public int getSpeedoutr() {
-        return speedoutr;
+    public Integer getSpeedOutR() {
+        return speedOutR;
     }
 
-    public void setSpeedoutr(int speedoutr) {
-        this.speedoutr = speedoutr;
+    public void setSpeedOutR(Integer speedOutR) {
+        this.speedOutR = speedOutR;
     }
 
-    public int getSpeedlocr() {
-        return speedlocr;
+    public Integer getSpeedLocR() {
+        return speedLocR;
     }
 
-    public void setSpeedlocr(int speedlocr) {
-        this.speedlocr = speedlocr;
+    public void setSpeedLocR(Integer speedLocR) {
+        this.speedLocR = speedLocR;
     }
 
-    public int getTools() {
+    public Integer getTools() {
         return tools;
     }
 
-    public void setTools(int tools) {
+    public void setTools(Integer tools) {
         this.tools = tools;
     }
 
@@ -324,34 +324,34 @@ public class ClientEntity {
         return "ClientEntity{" +
                 "id=" + id +
                 ", hosts='" + hosts + '\'' +
-                ", ipaddress='" + ipaddress + '\'' +
+                ", ipAddress='" + ipAddress + '\'' +
                 ", mac='" + mac + '\'' +
                 ", rule=" + rule +
                 ", i='" + i + '\'' +
                 ", status=" + status +
-                ", tplane=" + tplane +
+                ", tPlane=" + tPlane +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", sms='" + sms + '\'' +
                 ", address='" + address + '\'' +
-                ", streetname='" + streetname + '\'' +
-                ", housenumber='" + housenumber + '\'' +
-                ", flatnumber='" + flatnumber + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", houseNumber='" + houseNumber + '\'' +
+                ", flatNumber='" + flatNumber + '\'' +
                 ", mail='" + mail + '\'' +
                 ", password='" + password + '\'' +
                 ", balance=" + balance +
-                ", speedin=" + speedin +
-                ", speedout=" + speedout +
-                ", speedloc=" + speedloc +
-                ", date='" + date + '\'' +
-                ", ndog=" + ndog +
-                ", groupc=" + groupc +
-                ", statusp=" + statusp +
-                ", macr=" + macr +
-                ", ruler=" + ruler +
-                ", speedinr=" + speedinr +
-                ", speedoutr=" + speedoutr +
-                ", speedlocr=" + speedlocr +
+                ", speedIn=" + speedIn +
+                ", speedOut=" + speedOut +
+                ", speedLoc=" + speedLoc +
+                ", date=" + date +
+                ", nDog=" + nDog +
+                ", groupC=" + groupC +
+                ", statusP=" + statusP +
+                ", macR=" + macR +
+                ", ruleR=" + ruleR +
+                ", speedInR=" + speedInR +
+                ", speedOutR=" + speedOutR +
+                ", speedLocR=" + speedLocR +
                 ", tools=" + tools +
                 '}';
     }
@@ -363,75 +363,72 @@ public class ClientEntity {
 
         ClientEntity that = (ClientEntity) o;
 
-        if (id != that.id) return false;
-        if (rule != that.rule) return false;
-        if (status != that.status) return false;
-        if (tplane != that.tplane) return false;
-        if (Double.compare(that.balance, balance) != 0) return false;
-        if (speedin != that.speedin) return false;
-        if (speedout != that.speedout) return false;
-        if (speedloc != that.speedloc) return false;
-        if (ndog != that.ndog) return false;
-        if (groupc != that.groupc) return false;
-        if (statusp != that.statusp) return false;
-        if (macr != that.macr) return false;
-        if (ruler != that.ruler) return false;
-        if (speedinr != that.speedinr) return false;
-        if (speedoutr != that.speedoutr) return false;
-        if (speedlocr != that.speedlocr) return false;
-        if (tools != that.tools) return false;
+        if (!id.equals(that.id)) return false;
         if (!hosts.equals(that.hosts)) return false;
-        if (!ipaddress.equals(that.ipaddress)) return false;
+        if (!ipAddress.equals(that.ipAddress)) return false;
         if (!mac.equals(that.mac)) return false;
+        if (!rule.equals(that.rule)) return false;
         if (!i.equals(that.i)) return false;
+        if (!status.equals(that.status)) return false;
+        if (!tPlane.equals(that.tPlane)) return false;
         if (!name.equals(that.name)) return false;
         if (!phone.equals(that.phone)) return false;
         if (!sms.equals(that.sms)) return false;
         if (!address.equals(that.address)) return false;
-        if (!streetname.equals(that.streetname)) return false;
-        if (!housenumber.equals(that.housenumber)) return false;
-        if (!flatnumber.equals(that.flatnumber)) return false;
+        if (!streetName.equals(that.streetName)) return false;
+        if (!houseNumber.equals(that.houseNumber)) return false;
+        if (!flatNumber.equals(that.flatNumber)) return false;
         if (!mail.equals(that.mail)) return false;
         if (!password.equals(that.password)) return false;
-        return date.equals(that.date);
+        if (!balance.equals(that.balance)) return false;
+        if (!speedIn.equals(that.speedIn)) return false;
+        if (!speedOut.equals(that.speedOut)) return false;
+        if (!speedLoc.equals(that.speedLoc)) return false;
+        if (!date.equals(that.date)) return false;
+        if (!nDog.equals(that.nDog)) return false;
+        if (!groupC.equals(that.groupC)) return false;
+        if (!statusP.equals(that.statusP)) return false;
+        if (!macR.equals(that.macR)) return false;
+        if (!ruleR.equals(that.ruleR)) return false;
+        if (!speedInR.equals(that.speedInR)) return false;
+        if (!speedOutR.equals(that.speedOutR)) return false;
+        if (!speedLocR.equals(that.speedLocR)) return false;
+        return tools.equals(that.tools);
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = id;
+        int result = id.hashCode();
         result = 31 * result + hosts.hashCode();
-        result = 31 * result + ipaddress.hashCode();
+        result = 31 * result + ipAddress.hashCode();
         result = 31 * result + mac.hashCode();
-        result = 31 * result + rule;
+        result = 31 * result + rule.hashCode();
         result = 31 * result + i.hashCode();
-        result = 31 * result + status;
-        result = 31 * result + tplane;
+        result = 31 * result + status.hashCode();
+        result = 31 * result + tPlane.hashCode();
         result = 31 * result + name.hashCode();
         result = 31 * result + phone.hashCode();
         result = 31 * result + sms.hashCode();
         result = 31 * result + address.hashCode();
-        result = 31 * result + streetname.hashCode();
-        result = 31 * result + housenumber.hashCode();
-        result = 31 * result + flatnumber.hashCode();
+        result = 31 * result + streetName.hashCode();
+        result = 31 * result + houseNumber.hashCode();
+        result = 31 * result + flatNumber.hashCode();
         result = 31 * result + mail.hashCode();
         result = 31 * result + password.hashCode();
-        temp = Double.doubleToLongBits(balance);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + speedin;
-        result = 31 * result + speedout;
-        result = 31 * result + speedloc;
+        result = 31 * result + balance.hashCode();
+        result = 31 * result + speedIn.hashCode();
+        result = 31 * result + speedOut.hashCode();
+        result = 31 * result + speedLoc.hashCode();
         result = 31 * result + date.hashCode();
-        result = 31 * result + ndog;
-        result = 31 * result + groupc;
-        result = 31 * result + statusp;
-        result = 31 * result + macr;
-        result = 31 * result + ruler;
-        result = 31 * result + speedinr;
-        result = 31 * result + speedoutr;
-        result = 31 * result + speedlocr;
-        result = 31 * result + tools;
+        result = 31 * result + nDog.hashCode();
+        result = 31 * result + groupC.hashCode();
+        result = 31 * result + statusP.hashCode();
+        result = 31 * result + macR.hashCode();
+        result = 31 * result + ruleR.hashCode();
+        result = 31 * result + speedInR.hashCode();
+        result = 31 * result + speedOutR.hashCode();
+        result = 31 * result + speedLocR.hashCode();
+        result = 31 * result + tools.hashCode();
         return result;
     }
 }
