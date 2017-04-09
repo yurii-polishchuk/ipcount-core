@@ -35,11 +35,11 @@ public class ClientDTO {
         this.statusP = statusP;
     }
 
-    public Integer gettPlane() {
+    public Integer getTPlane() {
         return tPlane;
     }
 
-    public void settPlane(Integer tPlane) {
+    public void setTPlane(Integer tPlane) {
         this.tPlane = tPlane;
     }
 

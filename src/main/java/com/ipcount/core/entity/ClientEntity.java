@@ -71,6 +71,10 @@ public class ClientEntity {
     @Column(name = "tools", nullable = false)
     private Integer tools;
 
+    public ClientEntity(){
+
+    }
+
     public Integer getId() {
         return id;
     }
@@ -127,11 +131,11 @@ public class ClientEntity {
         this.status = status;
     }
 
-    public Integer gettPlane() {
+    public Integer getTPlane() {
         return tPlane;
     }
 
-    public void settPlane(Integer tPlane) {
+    public void setTPlane(Integer tPlane) {
         this.tPlane = tPlane;
     }
 
@@ -247,11 +251,11 @@ public class ClientEntity {
         this.date = date;
     }
 
-    public Integer getnDog() {
+    public Integer getNDog() {
         return nDog;
     }
 
-    public void setnDog(Integer nDog) {
+    public void setNDog(Integer nDog) {
         this.nDog = nDog;
     }
 
