@@ -131,11 +131,11 @@ public class ClientEntity {
         this.status = status;
     }
 
-    public Integer getTPlane() {
+    public Integer gettPlane() {
         return tPlane;
     }
 
-    public void setTPlane(Integer tPlane) {
+    public void settPlane(Integer tPlane) {
         this.tPlane = tPlane;
     }
 
@@ -251,11 +251,11 @@ public class ClientEntity {
         this.date = date;
     }
 
-    public Integer getNDog() {
+    public Integer getnDog() {
         return nDog;
     }
 
-    public void setNDog(Integer nDog) {
+    public void setnDog(Integer nDog) {
         this.nDog = nDog;
     }
 

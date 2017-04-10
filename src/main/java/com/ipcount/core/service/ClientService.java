@@ -11,8 +11,12 @@ import java.util.List;
 
 @Service
 public class ClientService {
-    @Autowired
+
     private ClientRepository clientRepository;
+    @Autowired
+    public ClientService(ClientRepository clientRepository){
+        this.clientRepository=clientRepository;
+    }
 
     public List<ClientDTO> findAllClients() {
         Iterable<ClientEntity> clients = clientRepository.findAll();
@@ -21,7 +25,7 @@ public class ClientService {
             ClientDTO clientDTO = new ClientDTO();
             clientDTO.setId(client.getId());
             clientDTO.setStatusP(client.getStatusP());
-            clientDTO.setTPlane(client.getTPlane());
+            clientDTO.settPlane(client.gettPlane());
             clientDTO.setSpeedIn(client.getSpeedIn());
             clientDTO.setSpeedOut(client.getSpeedOut());
             clientDTO.setIpAddress(client.getIpAddress());
