@@ -71,6 +71,10 @@ public class ClientEntity {
     @Column(name = "tools", nullable = false)
     private Integer tools;
 
+    public ClientEntity(){
+
+    }
+
     public Integer getId() {
         return id;
     }
