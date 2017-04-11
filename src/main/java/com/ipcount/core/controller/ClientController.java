@@ -20,7 +20,6 @@ public class ClientController {
     }
 
     @RequestMapping(value = "/clients", method = RequestMethod.GET)
-
     @ResponseBody
     public List<ClientDTO> clients() {
         return clientService.findAllClients();
