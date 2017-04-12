@@ -6,12 +6,10 @@ import com.ipcount.core.entity.ClientEntity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Oksana on 11-Apr-17.
- */
+
 public final class ClientUtil {
     static public ClientDTO toDTO(ClientEntity clientEntity) {
-        ClientDTO clientDTO= new ClientDTO() ;
+        ClientDTO clientDTO = new ClientDTO();
         clientDTO.setId(clientEntity.getId());
         clientDTO.setStatusP(clientEntity.getStatusP());
         clientDTO.settPlane(clientEntity.gettPlane());
