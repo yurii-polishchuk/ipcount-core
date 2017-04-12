@@ -24,7 +24,7 @@ public class ClientService {
         Iterable<ClientEntity> clients = clientRepository.findAll();
         List<ClientDTO> list = new ArrayList<>();
         clients.forEach(client -> {
-            ClientUtil.toDTO(client);
+            list.add(ClientUtil.toDTO(client));
 
         });
         return list;
