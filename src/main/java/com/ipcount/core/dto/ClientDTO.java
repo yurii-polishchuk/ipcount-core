@@ -17,7 +17,7 @@ public class ClientDTO {
     private String sms;
     private Integer groupC;
     private Integer speedLoc;
-    private Integer tools;
+    private String tools;
 
     public Integer getId() {
         return id;
@@ -147,11 +147,11 @@ public class ClientDTO {
         this.speedLoc = speedLoc;
     }
 
-    public Integer getTools() {
+    public String getTools() {
         return tools;
     }
 
-    public void setTools(Integer tools) {
+    public void setTools(String tools) {
         this.tools = tools;
     }
 }

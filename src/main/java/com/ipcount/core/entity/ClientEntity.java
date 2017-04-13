@@ -10,37 +10,37 @@ public class ClientEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @Column(name = "hosts", nullable = false)
+    @Column(name = "hosts", nullable = false, columnDefinition = "char")
     private String hosts;
-    @Column(name = "ipaddress", nullable = false)
+    @Column(name = "ipaddress", nullable = false, columnDefinition = "char")
     private String ipAddress;
-    @Column(name = "mac", nullable = false)
+    @Column(name = "mac", nullable = false, columnDefinition = "char")
     private String mac;
     @Column(name = "rule", nullable = false)
     private Integer rule;
-    @Column(name = "i", nullable = false)
+    @Column(name = "i", nullable = false, columnDefinition = "char")
     private String i;
     @Column(name = "status", nullable = false)
     private Integer status;
     @Column(name = "tplane", nullable = false)
     private Integer tPlane;
-    @Column(name = "name", nullable = false)
+    @Column(name = "name", nullable = false, columnDefinition = "char")
     private String name;
-    @Column(name = "phone", nullable = false)
+    @Column(name = "phone", nullable = false, columnDefinition = "char")
     private String phone;
-    @Column(name = "sms", nullable = false)
+    @Column(name = "sms", nullable = false, columnDefinition = "char")
     private String sms;
-    @Column(name = "address", nullable = false)
+    @Column(name = "address", nullable = false, columnDefinition = "char")
     private String address;
-    @Column(name = "streetname", nullable = false)
+    @Column(name = "streetname", nullable = false, columnDefinition = "char")
     private String streetName;
-    @Column(name = "housenumber", nullable = false)
+    @Column(name = "housenumber", nullable = false, columnDefinition = "char")
     private String houseNumber;
-    @Column(name = "flatnumber", nullable = false)
+    @Column(name = "flatnumber", nullable = false, columnDefinition = "char")
     private String flatNumber;
-    @Column(name = "mail", nullable = false)
+    @Column(name = "mail", nullable = false, columnDefinition = "char")
     private String mail;
-    @Column(name = "password", nullable = false)
+    @Column(name = "password", nullable = false, columnDefinition = "char")
     private String password;
     @Column(name = "balance", nullable = false)
     private Double balance;
@@ -68,8 +68,8 @@ public class ClientEntity {
     private Integer speedOutR;
     @Column(name = "speedlocr", nullable = false)
     private Integer speedLocR;
-    @Column(name = "tools", nullable = false)
-    private Integer tools;
+    @Column(name = "tools", nullable = false, columnDefinition = "char" )
+    private String tools;
 
     public ClientEntity(){
 
@@ -315,11 +315,11 @@ public class ClientEntity {
         this.speedLocR = speedLocR;
     }
 
-    public Integer getTools() {
+    public String getTools() {
         return tools;
     }
 
-    public void setTools(Integer tools) {
+    public void setTools(String tools) {
         this.tools = tools;
     }
 
