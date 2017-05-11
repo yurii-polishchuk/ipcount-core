@@ -10,3 +10,7 @@ spring:
     url: jdbc:h2:mem:test
     username: sa
     password:
+  data:
+    jpa:
+      repositories:
+        enabled: true
