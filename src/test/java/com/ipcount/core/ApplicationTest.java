@@ -1,6 +1,5 @@
 package com.ipcount.core;
 
-import com.ipcount.core.entity.ClientEntity;
 import com.ipcount.core.repository.ClientRepository;
 import com.ipcount.core.util.ClientBuilder;
 import org.junit.After;
@@ -17,7 +16,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -37,22 +35,35 @@ public class ApplicationTest {
         this.clientRepository = clientRepository;
     }
 
-
     @Autowired
     private MockMvc mockMvc;
 
 
     @Before
     public void setUp() {
-        ClientEntity clientEntity = new ClientEntity();
-        ClientBuilder.buildEntity(clientEntity);
-        clientRepository.save(clientEntity);
+        clientRepository.save(ClientBuilder.builderE());
     }
 
 
     @Test
     public void checkResponseBody() throws Exception {
-        String a= "[{\"id\":1,\"statusP\":1,\"tPlane\":1,\"speedIn\":1,\"speedOut\":1,\"ipAddress\":\"1\",\"name\":\"1\",\"phone\":\"1\",\"streetName\":\"1\",\"houseNumber\":\"1\",\"flatNumber\":\"1\",\"mail\":\"1\",\"password\":\"1\",\"sms\":\"1\",\"groupC\":1,\"speedLoc\":1,\"tools\":\"1\"}]";
+        String a = "[{\"id\":1,\"" +
+                "statusP\":1,\"" +
+                "tPlane\":1,\"" +
+                "speedIn\":1,\"" +
+                "speedOut\":1,\"" +
+                "ipAddress\":\"1\",\"" +
+                "name\":\"1\",\"" +
+                "phone\":\"1\",\"" +
+                "streetName\":\"1\",\"" +
+                "houseNumber\":\"1\",\"" +
+                "flatNumber\":\"1\",\"" +
+                "mail\":\"1\",\"" +
+                "password\":\"1\",\"" +
+                "sms\":\"1\",\"" +
+                "groupC\":1,\"" +
+                "speedLoc\":1,\"" +
+                "tools\":\"1\"}]";
         this.mockMvc.perform(get("/clients")).andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(a)));
