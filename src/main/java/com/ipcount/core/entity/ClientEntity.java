@@ -68,10 +68,10 @@ public class ClientEntity {
     private Integer speedOutR;
     @Column(name = "speedlocr", nullable = false)
     private Integer speedLocR;
-    @Column(name = "tools", nullable = false, columnDefinition = "char" )
+    @Column(name = "tools", nullable = false, columnDefinition = "char")
     private String tools;
 
-    public ClientEntity(){
+    public ClientEntity() {
 
     }
 
@@ -434,5 +434,209 @@ public class ClientEntity {
         result = 31 * result + speedLocR.hashCode();
         result = 31 * result + tools.hashCode();
         return result;
+    }
+
+    public static Builder builder() {
+
+        return new ClientEntity().new Builder();
+    }
+
+    public class Builder {
+
+
+
+        private Builder() {
+        }
+
+        public Builder setId(Integer id) {
+            ClientEntity.this.id = id;
+            return this;
+        }
+
+        public Builder setHosts(String hosts) {
+            ClientEntity.this.hosts = hosts;
+            return this;
+        }
+        public Builder setIpAddress(String ipAddress) {
+            ClientEntity.this.ipAddress = ipAddress;
+            return this;
+        }
+
+        public Builder setMac(String mac) {
+           ClientEntity.this.mac = mac;
+           return this;
+        }
+
+        public Builder setRule(Integer rule) {
+            ClientEntity.this.rule = rule;
+            return this;
+        }
+
+        public Builder setI(String i) {
+            ClientEntity.this.i = i;
+            return this;
+        }
+
+        public Builder setStatus(Integer status) {
+            ClientEntity.this.status = status;
+            return this;
+        }
+
+        public Builder settPlane(Integer tPlane) {
+            ClientEntity.this.tPlane = tPlane;
+            return this;
+        }
+
+        public Builder setName(String name) {
+            ClientEntity.this.name = name;
+            return this;
+        }
+
+        public Builder setPhone(String phone) {
+            ClientEntity.this.phone = phone;
+            return this;
+        }
+
+        public Builder setSms(String sms) {
+            ClientEntity.this.sms = sms;
+            return this;
+        }
+
+        public Builder setAddress(String address) {
+            ClientEntity.this.address = address;
+            return this;
+        }
+
+        public Builder setStreetName(String streetName) {
+            ClientEntity.this.streetName = streetName;
+            return this;
+        }
+
+        public Builder setHouseNumber(String houseNumber) {
+            ClientEntity.this.houseNumber = houseNumber;
+            return this;
+        }
+
+        public Builder setFlatNumber(String flatNumber) {
+            ClientEntity.this.flatNumber = flatNumber;
+            return this;
+        }
+
+        public Builder setMail(String mail) {
+            ClientEntity.this.mail = mail;
+            return this;
+        }
+
+        public Builder setPassword(String password) {
+            ClientEntity.this.password = password;
+            return this;
+        }
+
+        public Builder setBalance(Double balance) {
+            ClientEntity.this.balance = balance;
+            return this;
+        }
+
+        public Builder setSpeedIn(Integer speedIn) {
+            ClientEntity.this.speedIn = speedIn;
+            return this;
+        }
+
+        public Builder setSpeedOut(Integer speedOut) {
+            ClientEntity.this.speedOut = speedOut;
+            return this;
+        }
+
+        public Builder setSpeedLoc(Integer speedLoc) {
+            ClientEntity.this.speedLoc = speedLoc;
+            return this;
+        }
+
+        public Builder setDate(Date date) {
+            ClientEntity.this.date = date;
+            return this;
+        }
+
+        public Builder setnDog(Integer nDog) {
+            ClientEntity.this.nDog = nDog;
+            return this;
+        }
+
+        public Builder setGroupC(Integer groupC) {
+            ClientEntity.this.groupC = groupC;
+            return this;
+        }
+
+        public Builder setStatusP(Integer statusP) {
+            ClientEntity.this.statusP = statusP;
+            return this;
+        }
+
+        public Builder setMacR(Integer macR) {
+            ClientEntity.this.macR = macR;
+            return this;
+        }
+
+        public Builder setRuleR(Integer ruleR) {
+            ClientEntity.this.ruleR = ruleR;
+            return this;
+        }
+
+        public Builder setSpeedInR(Integer speedInR) {
+            ClientEntity.this.speedInR = speedInR;
+            return this;
+        }
+
+        public Builder setSpeedOutR(Integer speedOutR) {
+            ClientEntity.this.speedOutR = speedOutR;
+            return this;
+        }
+
+        public Builder setSpeedLocR(Integer speedLocR) {
+            ClientEntity.this.speedLocR = speedLocR;
+            return this;
+        }
+
+        public Builder setTools(String tools) {
+            ClientEntity.this.tools = tools;
+            return this;
+        }
+        public ClientEntity build() {
+            return ClientEntity.this;
+        }
+    }
+
+    public ClientEntity(Integer id, String hosts, String ipAddress, String mac, Integer rule, String i, Integer status, Integer tPlane, String name, String phone, String sms, String address, String streetName, String houseNumber, String flatNumber, String mail, String password, Double balance, Integer speedIn, Integer speedOut, Integer speedLoc, Date date, Integer nDog, Integer groupC, Integer statusP, Integer macR, Integer ruleR, Integer speedInR, Integer speedOutR, Integer speedLocR, String tools) {
+        this.id = id;
+        this.hosts = hosts;
+        this.ipAddress = ipAddress;
+        this.mac = mac;
+        this.rule = rule;
+        this.i = i;
+        this.status = status;
+        this.tPlane = tPlane;
+        this.name = name;
+        this.phone = phone;
+        this.sms = sms;
+        this.address = address;
+        this.streetName = streetName;
+        this.houseNumber = houseNumber;
+        this.flatNumber = flatNumber;
+        this.mail = mail;
+        this.password = password;
+        this.balance = balance;
+        this.speedIn = speedIn;
+        this.speedOut = speedOut;
+        this.speedLoc = speedLoc;
+        this.date = date;
+        this.nDog = nDog;
+        this.groupC = groupC;
+        this.statusP = statusP;
+        this.macR = macR;
+        this.ruleR = ruleR;
+        this.speedInR = speedInR;
+        this.speedOutR = speedOutR;
+        this.speedLocR = speedLocR;
+        this.tools = tools;
     }
 }
