@@ -6,15 +6,13 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
-@Repository
 public class ClientBuilder {
 
     public ClientBuilder() {
     }
 
     public static ClientEntity builderE() {
-        ClientEntity clientEntity = new ClientEntity();
-        clientEntity = ClientEntity.builder()
+        return ClientEntity.builder()
                 .setHosts("1")
                 .setIpAddress("1")
                 .setMac("1")
@@ -46,6 +44,6 @@ public class ClientBuilder {
                 .setSpeedInR(1)
                 .setSpeedLocR(1)
                 .setTools("1").build();
-        return clientEntity;
+
     }
 }
