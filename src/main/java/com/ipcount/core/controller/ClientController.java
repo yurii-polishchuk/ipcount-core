@@ -25,7 +25,7 @@ public class ClientController {
 
     @GetMapping("{id}")
     @ResponseBody
-    public ClientEntity getId(@PathVariable("id") int id) {
+    public List<ClientDTO> getId(@PathVariable("id") int id) {
 
         return this.clientService.findById(id);
     }
@@ -48,9 +48,10 @@ public class ClientController {
         clientService.deleteClient(id);
 
     }
-    /*@PutMapping("update/{id}")
-    public void updateClient(@PathVariable ("id") int id, @RequestBody ClientEntity clientEntity){
-        clientService.update(id, clientEntity);
-    }*/
+
+    @PutMapping("update")
+    public ClientEntity update(@RequestBody ClientDTO clientDTO) {
+        return clientService.update(clientDTO);
+    }
 }
 
