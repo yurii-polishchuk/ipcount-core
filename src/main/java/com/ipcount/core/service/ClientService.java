@@ -23,10 +23,10 @@ public class ClientService {
     public List<ClientDTO> findAllClients() {
         Iterable<ClientEntity> clients = clientRepository.findAll();
         List<ClientDTO> list = new ArrayList<>();
-        for (ClientEntity clientEntity : clients) {
-            ClientDTO clientDTO = ClientUtil.toDTO(clientEntity);
-            list.add(clientDTO);
-        }
+        clients.forEach((client) -> {
+            list.add(ClientUtil.toDTO(client));
+        });
+
         return list;
     }
 
