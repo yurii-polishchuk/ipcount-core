@@ -4,11 +4,14 @@ import com.ipcount.core.dto.ClientDTO;
 import com.ipcount.core.entity.ClientEntity;
 import com.ipcount.core.repository.ClientRepository;
 import com.ipcount.core.util.ClientUtil;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 public class ClientService {
@@ -40,25 +43,29 @@ public class ClientService {
     }
 
     public List<ClientDTO> findById(int id) {
-        ClientEntity newClients = clientRepository.findOne(id);
-        List<ClientDTO> list1 = new ArrayList<>();
-        list1.add(ClientUtil.toDTO(newClients));
+        ClientEntity clients = clientRepository.findOne(id);
+        List<ClientDTO> list = new ArrayList<>();
+        list.add(ClientUtil.toDTO(clients));
 
-        return list1;
+        return list ;
     }
 
-    public ClientEntity save(ClientEntity clientEntity) {
-        return clientRepository.save(clientEntity);
+    public List<ClientDTO> save(ClientEntity clientEntity) {
+        ClientEntity clients = clientRepository.save(clientEntity);
+        List<ClientDTO> list = new ArrayList<>();
+        list.add(ClientUtil.toDTO(clients));
+
+        return list ;
     }
 
     public void deleteClient(int id) {
-        clientRepository.delete(Integer.valueOf(id));
+        clientRepository.delete(id);
     }
 
-    public ClientEntity update(ClientDTO clientDTO) {
+    public List<ClientDTO> update(ClientDTO clientDTO) throws NotFoundException {
         ClientEntity dbEntity = clientRepository.findOne(clientDTO.getId());
         if (dbEntity == null) {
-            System.out.println("This id= " + clientDTO.getId() + " is not correct");
+            throw new NotFoundException("Can't update non-existent user.") ;
         } else {
 
             dbEntity.setStatusP(clientDTO.getStatusP());

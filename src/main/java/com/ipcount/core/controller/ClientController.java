@@ -3,6 +3,7 @@ package com.ipcount.core.controller;
 import com.ipcount.core.dto.ClientDTO;
 import com.ipcount.core.entity.ClientEntity;
 import com.ipcount.core.service.ClientService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,40 +18,40 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @GetMapping("clients")
+    @GetMapping("/clients")
     public List<ClientDTO> clients() {
 
         return clientService.findAllClients();
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/clients/{id}")
     @ResponseBody
-    public List<ClientDTO> getId(@PathVariable("id") int id) {
+    public List<ClientDTO> getById(@PathVariable("id") int id) {
 
-        return this.clientService.findById(id);
+        return clientService.findById(id);
     }
 
-    @GetMapping("/client/{name}")
+    @GetMapping("/clients/{name}")
     @ResponseBody
-    public List<ClientDTO> getName(@PathVariable("name") String name) {
+    public List<ClientDTO> getByName(@PathVariable("name") String name) {
         return clientService.findByName(name);
     }
 
-    @PostMapping("newClient")
-    public ClientEntity newClients(@RequestBody ClientEntity clientEntity) {
+    @PostMapping("/client")
+    public List<ClientDTO> saveClient (@RequestBody ClientEntity clientEntity) {
 
         return clientService.save(clientEntity);
     }
 
 
-    @DeleteMapping("/deleteClient/{id}")
+    @DeleteMapping("/clients/{id}")
     public void deleteClient(@PathVariable("id") int id) {
         clientService.deleteClient(id);
 
     }
 
-    @PutMapping("update")
-    public ClientEntity update(@RequestBody ClientDTO clientDTO) {
+    @PutMapping("/client")
+    public List<ClientDTO> updateClientById(@RequestBody ClientDTO clientDTO) throws NotFoundException {
         return clientService.update(clientDTO);
     }
 }
