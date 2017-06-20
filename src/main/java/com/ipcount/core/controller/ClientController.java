@@ -2,8 +2,8 @@ package com.ipcount.core.controller;
 
 import com.ipcount.core.dto.ClientDTO;
 import com.ipcount.core.entity.ClientEntity;
+import com.ipcount.core.exception.EntityNotFoundException;
 import com.ipcount.core.service.ClientService;
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +38,7 @@ public class ClientController {
     }
 
     @PostMapping("/client")
-    public List<ClientDTO> saveClient (@RequestBody ClientEntity clientEntity) {
+    public ClientDTO saveClient(@RequestBody ClientEntity clientEntity) {
 
         return clientService.save(clientEntity);
     }
@@ -51,7 +51,7 @@ public class ClientController {
     }
 
     @PutMapping("/client")
-    public List<ClientDTO> updateClientById(@RequestBody ClientDTO clientDTO) throws NotFoundException {
+    public ClientDTO updateClient(@RequestBody ClientDTO clientDTO) throws EntityNotFoundException {
         return clientService.update(clientDTO);
     }
 }

@@ -3,9 +3,6 @@ package com.ipcount.core.util;
 import com.ipcount.core.dto.ClientDTO;
 import com.ipcount.core.entity.ClientEntity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 public final class ClientUtil {
     static public ClientDTO toDTO(ClientEntity clientEntity) {
@@ -29,4 +26,27 @@ public final class ClientUtil {
         clientDTO.setTools(clientEntity.getTools());
         return clientDTO;
     }
+
+    static public ClientEntity clientDTOUpdate(ClientEntity clientEntity, ClientDTO clientDTO) {
+        clientEntity.setStatusP(clientDTO.getStatusP());
+        clientEntity.settPlane(clientDTO.gettPlane());
+        clientEntity.setSpeedIn(clientDTO.getSpeedIn());
+        clientEntity.setSpeedOut(clientDTO.getSpeedOut());
+        clientEntity.setIpAddress(clientDTO.getIpAddress());
+        clientEntity.setName(clientDTO.getName());
+        clientEntity.setPhone(clientDTO.getPhone());
+        clientEntity.setStreetName(clientDTO.getStreetName());
+        clientEntity.setHouseNumber(clientDTO.getHouseNumber());
+        clientEntity.setFlatNumber(clientDTO.getFlatNumber());
+        clientEntity.setMail(clientDTO.getMail());
+        clientEntity.setPassword(clientDTO.getPassword());
+        clientEntity.setSms(clientDTO.getSms());
+        clientEntity.setGroupC(clientDTO.getGroupC());
+        clientEntity.setSpeedLoc(clientDTO.getSpeedLoc());
+        clientEntity.setTools(clientDTO.getTools());
+
+        return clientEntity;
+
+    }
+
 }
